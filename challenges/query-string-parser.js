@@ -45,3 +45,32 @@
 */
 
 // YOUR CODE HERE
+
+// Create a function parseQueryString that accepts a string
+function parseQueryString(string) {
+
+  // Create a var (object) to hold the updated values
+  var newString = {};
+
+  // Check for an & separator and hold each side of the argument in an array
+  var pairs = string.split('&');
+
+  // Convert an & sign into proper formatting to separate key/value pairs
+  // So (x=y&a=b) should become x: 'y', a: 'b'
+  pairs.forEach(function(item) {
+  
+  // Check for a = separator and hold each side of the argument in an array.
+  var pair = item.split('=');
+
+  // Convert an = sign into proper formatting to create a key/value pair.
+  // So (a=b) should become a: 'b',
+  newString[pair[0]] = pair[1];
+
+  });
+
+  // return the result to the newString
+  return newString;
+
+}
+
+parseQueryString('first=alpha&last=omega');
