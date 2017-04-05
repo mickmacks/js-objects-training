@@ -34,3 +34,17 @@
 */
 
 // YOUR CODE HERE
+
+// Create a function daysUntilDate(date) {}
+
+var birthday = new Date('12/03/2017');
+var birthdayMilliseconds = birthday.getTime();
+
+// Use var today = date.now to get the current number of milliseconds until today.
+var todayMilliseconds = Date.now();
+
+var diffInMilliseconds = birthdayMilliseconds - todayMilliseconds;
+
+var diffInDays = diffInMilliseconds / 86400000 // milliseconds in a day
+
+return diffInDays;
